@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}
     My Blog
 {% endblock %}
-
+{% block header_references %}
+    <link rel="stylesheet" href="{% static 'blog/index.css' %}">
+{#    <link rel="stylesheet" href="{% static 'app.css' %}">#}
+{% endblock %}
 {% block content %}
     <header id="main-navigation">
         <h1>
@@ -14,7 +17,7 @@
     </header>
     <section id="welcome">
         <header>
-            <img src="" alt="toplearn - Author of this blog">
+            <img src="{% static 'blog/images/عکس.jpg' %}" alt="toplearn - Author of this blog">
             <h2>Top learn blog project</h2>
         </header>
         <p>Hi, my name is mohammad, I am a teacher in toplearn</p>
@@ -25,7 +28,46 @@
             <li>
                 <article class="post">
                     <a href="">
-                        <img src="" alt="learning django">
+                        <img src="{% static 'blog/images/nody-عکسهای-بسیار-زیبا-1625520990.jpg' %}" alt="learning django">
+                        <div class="post__content">
+                            <h3>learning django</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Facilis iste mollitia quae quam quidem quis quisquam
+                                tenetur ullam ut. Voluptates!</p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+            <li>
+                <article class="post">
+                    <a href="">
+                        <img src="{% static 'blog/images/nody-عکسهای-بسیار-زیبا-1625520990.jpg' %}" alt="learning django">
+                        <div class="post__content">
+                            <h3>learning django</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Facilis iste mollitia quae quam quidem quis quisquam
+                                tenetur ullam ut. Voluptates!</p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+            <li>
+                <article class="post">
+                    <a href="">
+                        <img src="{% static 'blog/images/nody-عکسهای-بسیار-زیبا-1625520990.jpg' %}" alt="learning django">
+                        <div class="post__content">
+                            <h3>learning django</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Facilis iste mollitia quae quam quidem quis quisquam
+                                tenetur ullam ut. Voluptates!</p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+            <li>
+                <article class="post">
+                    <a href="">
+                        <img src="{% static 'blog/images/nody-عکسهای-بسیار-زیبا-1625520990.jpg' %}" alt="learning django">
                         <div class="post__content">
                             <h3>learning django</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
