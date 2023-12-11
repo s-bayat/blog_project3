@@ -69,7 +69,10 @@ def index(request):
 
 
 def posts(request):
-    return render(request, 'blog/all-posts.html')
+    context = {
+        'all_posts': all_posts
+    }
+    return render(request, 'blog/all-posts.html', context)
 
 
 def single_post(request, slug):
