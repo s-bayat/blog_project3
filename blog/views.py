@@ -16,6 +16,12 @@ all_posts = [
             Aliquid asperiores corporis deserunt dignissimos,
             doloribus inventore ipsam labore nostrum obcaecati
             quas suscipit vitae. Dignissimos fugit odio possimus sint voluptatem.
+            Aliquid asperiores corporis deserunt dignissimos,
+            doloribus inventore ipsam labore nostrum obcaecati
+            quas suscipit vitae. Dignissimos fugit odio possimus sint voluptatem.
+            Aliquid asperiores corporis deserunt dignissimos,
+            doloribus inventore ipsam labore nostrum obcaecati
+            quas suscipit vitae. Dignissimos fugit odio possimus sint voluptatem.
         """
     },
     {
@@ -32,10 +38,16 @@ all_posts = [
             Aliquid asperiores corporis deserunt dignissimos,
             doloribus inventore ipsam labore nostrum obcaecati
             quas suscipit vitae. Dignissimos fugit odio possimus sint voluptatem.
+            Aliquid asperiores corporis deserunt dignissimos,
+            doloribus inventore ipsam labore nostrum obcaecati
+            quas suscipit vitae. Dignissimos fugit odio possimus sint voluptatem.
+            Aliquid asperiores corporis deserunt dignissimos,
+            doloribus inventore ipsam labore nostrum obcaecati
+            quas suscipit vitae. Dignissimos fugit odio possimus sint voluptatem.
         """
     },
     {
-        'slug': 'learning-machine laerning',
+        'slug': 'learning-machine learning',
         'title': 'ML course',
         'author': 'mohammad ordokhani',
         'image': 'ml.jpg',
@@ -45,6 +57,12 @@ all_posts = [
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Animi cum debitis, enim excepturi exercitationem ipsa
             molestiae nobis praesentium quod temporibus!
+            Aliquid asperiores corporis deserunt dignissimos,
+            doloribus inventore ipsam labore nostrum obcaecati
+            quas suscipit vitae. Dignissimos fugit odio possimus sint voluptatem.
+            Aliquid asperiores corporis deserunt dignissimos,
+            doloribus inventore ipsam labore nostrum obcaecati
+            quas suscipit vitae. Dignissimos fugit odio possimus sint voluptatem.
             Aliquid asperiores corporis deserunt dignissimos,
             doloribus inventore ipsam labore nostrum obcaecati
             quas suscipit vitae. Dignissimos fugit odio possimus sint voluptatem.
@@ -76,4 +94,7 @@ def posts(request):
 
 
 def single_post(request, slug):
-    return render(request, 'blog/post-detail.html')
+    post = next(post for post in all_posts if post['slug'] == slug)
+    return render(request, 'blog/post-detail.html', {
+        'post': post
+    })
